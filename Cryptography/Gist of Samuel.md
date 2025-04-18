@@ -1,4 +1,4 @@
-# Gist of Samuel - 216
+# Gist of Samuel (Crypto) - 216
 > Samuel is gatekeeping his favourite campsite. We found his note.
 
 flag: umcs{the_name_of_the_campsite}
@@ -10,8 +10,7 @@ flag: umcs{the_name_of_the_campsite}
 ### Examining the File Contents
 We are provided with a text file which contains the content to be decrypted. The file’s content consists of various emojis, with a combination of 3 types of train emojis.
 
-![Screen Shot 04-13-25 at 01.05 PM.PNG](attachment:ab04c392-d516-423b-8eea-29ddd8f6f8d8:Screen_Shot_04-13-25_at_01.05_PM.png)
-![Screen Shot 04-13-25 at 01.05 PM.PNG](attachment:ab04c392-d516-423b-8eea-29ddd8f6f8d8:Screen_Shot_04-13-25_at_01.05_PM.png)
+![Screen Shot 04-13-25 at 01 05 PM PNG](https://github.com/user-attachments/assets/6fbd632f-b561-4abe-8a91-0ffaff53f34f)
 
 We’re able to identify that each of these train emojis represent a different symbol in *morse code* by utilizing some good old pattern recognition.
 
@@ -23,12 +22,12 @@ Through the power of elimination, we can assume that 🚋 is used to represent t
 
 There are a few other nods and hints to morse code within the challenge itself, one being the name “Samuel” - which hints at Samuel Morse, the inventor of Morse Code. Another is the invisible characters inside the challenge hint.
 
-![image.png](attachment:e47d6497-3c7b-4e5f-b787-93d25f8f6a3d:image.png)
+![image](https://github.com/user-attachments/assets/467ed202-9e41-4506-8fbc-d674c4b6e040)
 
 ### Decoding the File Contents
 Once we have analyzed and obtained crucial clues, the emojis are parsed into Cyberchef and decoded utilizing the Find/Replace Recipe, which returned a potential morse code.
 
-![Cyberchef result.png](attachment:78a348e0-777d-4636-b983-9043fcca068c:Cyberchef_result.png)
+![Cyberchef result](https://github.com/user-attachments/assets/d969c85b-5cdc-4f02-af2c-ab7195765771)
 
 ### Decoding the Morse Code
 The morse code is then decoded to reveal the hidden message behind it. In this case, there is a gist code!
@@ -37,7 +36,7 @@ The morse code is then decoded to reveal the hidden message behind it. In this c
 
 Besides that, the decoded morse code also provided additional information such as Samuel’s favourite transportation, which is a train as well as his favourite number which is 8. These information would come in  handy in the later sections.
 
-![Morse code translator.png](attachment:892505ad-65b6-411c-95ae-061f4ff26133:Morse_code_translator.png)
+![Morse code translator](https://github.com/user-attachments/assets/82cc184a-54a7-46d5-accf-dc20e4cf241d)
 
 ### Searching for the Gist
 Utilizing the provided gist code, we entered in the URL:
@@ -50,12 +49,12 @@ in hopes of finding additional information to obtain the flag. This had led us t
 
 Once the search was done, we stumbled upon a text file, named **gistfile1.txt** which could potentially lead us to the flag. 
 
-![Github Gist.png](attachment:23c298e6-e8f9-421c-9623-cfc795fa4af4:Github_Gist.png)
+![Github Gist](https://github.com/user-attachments/assets/998c3e61-8be9-4afd-806e-e1872d1cfcb9)
 
 ### Analyze the Gist Text File
 The gist text file is downloaded and upon opening the file, we are presented with new content to be decrypted. 
 
-![image.png](attachment:be490fda-a5bd-4089-8612-3919e5207f62:image.png)
+![image](https://github.com/user-attachments/assets/e1677d10-b667-4664-adcf-01dc691043df)
 
 ### Decoding the Gist Text File Contents
 As mentioned above, the decoded morse code provided information which stated that Samuel likes trains very much and his favourite number is 8. By utilizing this information, we can deduce that:
@@ -65,11 +64,11 @@ As mentioned above, the decoded morse code provided information which stated tha
 
 Hence, we parsed in the file’s content into Cyberchef and decrypted it utilizing the Rail Fence Cipher Decode Recipe with the key value of 8, which returned an output.
 
-![Cyberchef cipher decode.PNG](attachment:2b36f907-7066-4b5e-9360-15cffc1a1f34:Cyberchef_cipher_decode.png)
+![Cyberchef cipher decode PNG](https://github.com/user-attachments/assets/1532d85d-1221-4adf-aadd-b635a1994468)
 
 The output is then copied to an empty file to be inspected. Upon zooming out the file’s content, we can clearly see the message of the flag!
 
-![Flag.png](attachment:29b889ed-0501-4880-9b63-4a8c99831e47:Flag.png)
+![Flag](https://github.com/user-attachments/assets/cd3c49a0-e5e8-40db-99dd-b34563d9d5e1)
 
 ```
 umcs{willow_tree_campsite}
