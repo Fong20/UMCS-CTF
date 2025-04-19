@@ -1,4 +1,4 @@
-# Healthcheck
+# Healthcheck (Web)
 
 > I left my hopes_and_dreams on the server. can you help fetch it for me?
 > 
